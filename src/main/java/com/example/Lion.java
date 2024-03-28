@@ -6,10 +6,6 @@ public class Lion {
 
     boolean hasMane;
 
-    public Lion(String sex) throws Exception {
-        this(sex, new Feline());
-    }
-
     public Lion(String sex, Feline animal) throws Exception {
         if ("Самец".equals(sex)) {
             hasMane = true;

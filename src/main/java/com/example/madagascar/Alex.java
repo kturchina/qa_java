@@ -1,5 +1,6 @@
 package com.example.madagascar;
 
+import com.example.Feline;
 import com.example.Lion;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class Alex extends Lion {
     private String placeOfLiving = DEFAULT_PLACE_OF_LIVING;
 
     public Alex() throws Exception {
-        super("Самец");
+        super("Самец", new Feline());
     }
 
     public List<String> getFriends() {
