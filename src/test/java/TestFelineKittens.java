@@ -32,6 +32,11 @@ public class TestFelineKittens {
     @Test
     public void testKittens() {
         var feline = new Feline();
-        assertEquals(expected, param == null ? feline.getKittens() : feline.getKittens(param));
+        if (param == null) {
+            assertEquals(expected, feline.getKittens());
+        }
+        else {
+            assertEquals(expected, feline.getKittens(param));
+        }
     }
 }
