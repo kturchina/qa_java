@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Alex.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">untitled</a> &gt; <a href="index.source.html" class="el_package">com.example.madagascar</a> &gt; <span class="el_source">Alex.java</span></div><h1>Alex.java</h1><pre class="source lang-java linenums">package com.example.madagascar;
+
+import com.example.Feline;
+import com.example.Lion;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Alex extends Lion {
+
+    public final static String DEFAULT_PLACE_OF_LIVING = &quot;Нью-Йоркский зоопарк&quot;;
+<span class="fc" id="L11">    public final static List&lt;String&gt; DEFAULT_FRIENDS = List.of(&quot;Марти&quot;, &quot;Глория&quot;, &quot;Мелман&quot;);</span>
+
+<span class="fc" id="L13">    private final List&lt;String&gt; friends = new ArrayList&lt;&gt;() {{</span>
+<span class="fc" id="L14">        addAll(DEFAULT_FRIENDS);</span>
+<span class="fc" id="L15">    }};</span>
+<span class="fc" id="L16">    private String placeOfLiving = DEFAULT_PLACE_OF_LIVING;</span>
+
+    public Alex() throws Exception {
+<span class="fc" id="L19">        super(&quot;Самец&quot;, new Feline());</span>
+<span class="fc" id="L20">    }</span>
+
+    public List&lt;String&gt; getFriends() {
+<span class="fc" id="L23">        return friends;</span>
+    }
+<span class="fc" id="L25">    public void addFriend(String friend) { friends.add(friend); }</span>
+<span class="fc" id="L26">    public void removeFriend(String friend) { friends.remove(friend); }</span>
+
+    public String getPlaceOfLiving() {
+<span class="fc" id="L29">        return placeOfLiving;</span>
+    }
+    public void setPlaceOfLiving(String placeOfLiving) {
+<span class="fc" id="L32">        this.placeOfLiving = placeOfLiving;</span>
+<span class="fc" id="L33">    }</span>
+
+    @Override
+    public int getKittens() {
+<span class="fc" id="L37">        return 0;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
